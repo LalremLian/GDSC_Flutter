@@ -1,3 +1,4 @@
+import 'package:dummy/GDSC/view/GDSC_home_page.dart';
 import 'package:dummy/view/productBox_page.dart';
 import 'package:flutter/material.dart';
 
@@ -66,7 +67,7 @@ class Profile extends StatelessWidget {
             ),
           ),
           Padding(
-            //....................................................Button Layouts
+            //..................................................Button GDSC_Home
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
               //..................................Navigator.pop is not mandatory
@@ -74,10 +75,10 @@ class Profile extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const ButtonLayouts()),
+                      builder: (context) => const GDSC_Home()),
                 );
               },
-              child: const Text('Button Layouts'),
+              child: const Text('GDSC Travel App'),
             ),
           ),
         ],
