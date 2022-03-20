@@ -1,3 +1,4 @@
+import 'package:dummy/view/more_page.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -9,7 +10,7 @@ class Home extends StatelessWidget {
       backgroundColor: Colors.teal,
       appBar: AppBar(
         backgroundColor: Colors.teal,
-        title: const Text("Project 'F'"),
+        title: const Text("Project 'Minion'"),
         centerTitle: true,
       ),
       body: Column(
@@ -91,7 +92,7 @@ class Home extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const Profile()),
                 );
               },
-              child: const Text('Submit'))
+              child: const Text('More Options'))
         ],
       ),
     );

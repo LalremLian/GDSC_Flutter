@@ -1,0 +1,87 @@
+import 'package:dummy/view/productBox_page.dart';
+import 'package:flutter/material.dart';
+
+import '../main.dart';
+import 'buttonLayouts_page.dart';
+
+class Profile extends StatelessWidget {
+  const Profile({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.teal,
+      appBar: AppBar(
+        backgroundColor: Colors.teal,
+        title: const Text(
+          'Profile',
+          textAlign: TextAlign.center,
+        ),
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              //..................................Navigator.pop is not mandatory
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Go Back'),
+            ),
+          ),
+          Padding(
+            //....................................................Button Layouts
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              //..................................Navigator.pop is not mandatory
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ButtonLayouts()),
+                );
+              },
+              child: const Text('Button Layouts'),
+            ),
+          ),
+          Padding(
+            //.................................................Button ProductBox
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              //..................................Navigator.pop is not mandatory
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProductBox(
+                          name: 'name',
+                          description: 'description',
+                          price: 100,
+                          image:
+                          'https://m.media-amazon.com/images/M/MV5BMjc2NjYyMzgtMmExMi00YzllLTgxNjgtNjA4MmUzMWZlNDZkXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_.jpg')),
+                );
+              },
+              child: const Text('Product Box'),
+            ),
+          ),
+          Padding(
+            //....................................................Button Layouts
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              //..................................Navigator.pop is not mandatory
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ButtonLayouts()),
+                );
+              },
+              child: const Text('Button Layouts'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
