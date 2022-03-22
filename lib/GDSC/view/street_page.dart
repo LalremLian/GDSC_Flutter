@@ -20,10 +20,15 @@ class _StreetsState extends State<Streets> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(widget.city.cityImage,height: 280, width: 380, fit: BoxFit.cover,),
+            //.............................................................Image
+            //......................................Hero Widget is for Animation
+            Hero(
+              tag: widget.city.cityName,
+                child: Image.network(widget.city.cityImage,height: 280, width: 380, fit: BoxFit.cover,)),
             const SizedBox(height: 10,),
             const Padding(
               padding: EdgeInsets.all(8.0),
+              //............................................................Text
               child: Text("Attractions",
               style: TextStyle(
                 fontSize: 20,
@@ -32,7 +37,7 @@ class _StreetsState extends State<Streets> {
             ),
             SizedBox(
               height: 120,
-              //color: Colors.blue,
+              //........................................................ListView
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: widget.city.cityPlaces.length,
@@ -40,11 +45,12 @@ class _StreetsState extends State<Streets> {
                   var placedata = widget.city.cityPlaces[index];
                   return Column(
                     children: [
-                      //...........................ClipRRect is for rounded corner
+                      //.........................ClipRRect is for rounded corner
                       ClipRRect(
                         borderRadius: BorderRadius.circular(30),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
+                          //...............................................Image
                           child: Image.network(placedata.placeImage,
                           height: 100,
                           width: 150,
@@ -57,6 +63,7 @@ class _StreetsState extends State<Streets> {
             ),
             const Padding(
               padding: EdgeInsets.all(8.0),
+              //............................................................Text
               child: Text("Hotels",
                 style: TextStyle(
                     fontSize: 20,
@@ -64,6 +71,7 @@ class _StreetsState extends State<Streets> {
                 ),),
             ),
             ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               itemCount: widget.city.cityHotels.length,
                 itemBuilder: (context,index){
@@ -73,11 +81,36 @@ class _StreetsState extends State<Streets> {
                       padding: const EdgeInsets.all(8.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(5),
+                        //.................................................Image
                         child: Image.network(widget.city.cityHotels[index].hotelImage,
                         height: 120,
                         width: 150,
                         fit: BoxFit.cover,),
                       ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(
+                          width: 50,
+                        ),
+                        Text("Name: " + widget.city.cityHotels[index].hotelName),
+                        Text("Description: " + widget.city.cityHotels[index].hotelDescription),
+                        Text("Address: " + widget.city.cityHotels[index].hotelAddress),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0,),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(5),
+                            //..............................................Button
+                            child: Container(
+                              height: 30,
+                              width: 60,
+                              color: Colors.blue[300]?.withOpacity(.8),
+                              child: Center(child: Text(widget.city.cityHotels[index].hotelPrice)),
+                            ),
+                          ),
+                        )
+                      ],
                     )
                   ],
                 );

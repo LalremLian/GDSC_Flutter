@@ -14,10 +14,12 @@ class GDSC_Home extends StatelessWidget {
             //.............................................................Stack
             Stack(
               children: [
+                //.........................................................Image
                 Image.network(
                     "https://media.istockphoto.com/photos/big-ben-and-whitehall-from-trafalgar-square-london-picture-id503564070?b=1&k=20&m=503564070&s=170667a&w=0&h=TpfcfJnpBV6Nz0LAQWAVe-JEa1fqe0jF3IqaX_CaRGs="),
                 const Padding(
                   padding: EdgeInsets.only(top: 70, left: 200, right: 20),
+                  //........................................................Text
                   child: Text(
                     "Welcome to the Streets of London",
                     style: TextStyle(
@@ -55,9 +57,13 @@ class GDSC_Home extends StatelessWidget {
                         child: SizedBox(
                             child: Stack(
                           children: [
-                            Image.network(cities[index].cityImage,
-                                height: 300, width: 300, fit: BoxFit.cover),
-                            //........................SizedBox is like a Container
+                            //......................Hero Widget is for Animation
+                            Hero(
+                              tag: cities[index].cityName,
+                              child: Image.network(cities[index].cityImage,
+                                  height: 300, width: 300, fit: BoxFit.cover),
+                            ),
+                            //......................SizedBox is like a Container
                             Align(
                               alignment: Alignment.bottomCenter,
                               child: Container(
@@ -65,6 +71,7 @@ class GDSC_Home extends StatelessWidget {
                                 width: 200,
                                 color: Colors.blue[200]?.withOpacity(.7),
                                 child: Center(
+                                  //........................................Text
                                   child: Text(
                                     cities[index].cityName,
                                     style: const TextStyle(
