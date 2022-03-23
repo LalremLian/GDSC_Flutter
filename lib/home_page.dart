@@ -1,4 +1,4 @@
-import 'package:dummy/view/more_page.dart';
+import 'package:dummy/more_page.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -89,7 +89,7 @@ class Home extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Profile()),
+                  MaterialPageRoute(builder: (context) => const MorePage()),
                 );
               },
               child: const Text('More Options'))

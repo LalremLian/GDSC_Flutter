@@ -39,7 +39,6 @@ class GDSC_Home extends StatelessWidget {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),
                 itemBuilder: (context, index) {
-                  var citiList = cities[index];
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     //........................InkWell is like setOnClickListener

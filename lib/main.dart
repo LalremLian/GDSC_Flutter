@@ -1,4 +1,4 @@
-import 'package:dummy/view/profile_page.dart';
+import 'package:dummy/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

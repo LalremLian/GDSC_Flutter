@@ -1,12 +1,13 @@
 import 'package:dummy/GDSC/view/GDSC_home_page.dart';
-import 'package:dummy/view/productBox_page.dart';
+import 'package:dummy/OCR/view/home_page.dart';
+import 'package:dummy/productBox_page.dart';
 import 'package:flutter/material.dart';
 
-import '../main.dart';
+import 'main.dart';
 import 'buttonLayouts_page.dart';
 
-class Profile extends StatelessWidget {
-  const Profile({Key? key}) : super(key: key);
+class MorePage extends StatelessWidget {
+  const MorePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +80,21 @@ class Profile extends StatelessWidget {
                 );
               },
               child: const Text('GDSC Travel App'),
+            ),
+          ),
+          Padding(
+            //..................................................Button GDSC_Home
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              //..................................Navigator.pop is not mandatory
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const OCR_Home()),
+                );
+              },
+              child: const Text('OCR Project'),
             ),
           ),
         ],

@@ -24,7 +24,11 @@ class _StreetsState extends State<Streets> {
             //......................................Hero Widget is for Animation
             Hero(
               tag: widget.city.cityName,
-                child: Image.network(widget.city.cityImage,height: 280, width: 380, fit: BoxFit.cover,)),
+                child: Image.network(widget.city.cityImage,
+                  height: 280,
+                  width: 380,
+                  fit: BoxFit.cover,)
+            ),
             const SizedBox(height: 10,),
             const Padding(
               padding: EdgeInsets.all(8.0),
@@ -42,7 +46,7 @@ class _StreetsState extends State<Streets> {
                 scrollDirection: Axis.horizontal,
                 itemCount: widget.city.cityPlaces.length,
                   itemBuilder: (context,index){
-                  var placedata = widget.city.cityPlaces[index];
+                  var placeData = widget.city.cityPlaces[index];
                   return Column(
                     children: [
                       //.........................ClipRRect is for rounded corner
@@ -51,7 +55,7 @@ class _StreetsState extends State<Streets> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           //...............................................Image
-                          child: Image.network(placedata.placeImage,
+                          child: Image.network(placeData.placeImage,
                           height: 100,
                           width: 150,
                           fit: BoxFit.cover,),
@@ -101,12 +105,20 @@ class _StreetsState extends State<Streets> {
                           padding: const EdgeInsets.only(top: 8.0,),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(5),
-                            //..............................................Button
-                            child: Container(
-                              height: 30,
-                              width: 60,
-                              color: Colors.blue[300]?.withOpacity(.8),
-                              child: Center(child: Text(widget.city.cityHotels[index].hotelPrice)),
+                            //............................................Button
+                            child: GestureDetector(
+                              child: InkWell(
+                                onTap: (){
+                                  //...................calling the function here
+                                  _showDialog(context);
+                                },
+                                child: Container(
+                                  height: 30,
+                                  width: 60,
+                                  color: Colors.blue[300]?.withOpacity(.8),
+                                  child: Center(child: Text(widget.city.cityHotels[index].hotelPrice)),
+                                ),
+                              ),
                             ),
                           ),
                         )
@@ -122,4 +134,47 @@ class _StreetsState extends State<Streets> {
     );
   }
 }
+//......................................................................Function
+void _showDialog(BuildContext context){
+  showDialog(
+    context: context, builder: (BuildContext context) {
+    // return object of type Dialog
+    return AlertDialog(
+      title: const Text("Message"),
+      shape:
+      const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+      ),
+      content: const Text("Are you sure do you want to book this Inn?"),
+      actions: <Widget>[
+        //............................................................TextButton
+        TextButton(
+          child: const Text("Close"),
+          onPressed: () {
+            var snackBar = const SnackBar(
+              duration: Duration(milliseconds: 2000),
+                content: Text('Thanks for using our App.')
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            Navigator.of(context).pop();
+          },
+        ),
+        //............................................................TextButton
+        TextButton(
+          child: const Text("Proceed"),
+          onPressed: (){
+            var snackBar = const SnackBar(
+                duration: Duration(milliseconds: 2000),
+                content: Text('Booking Success.')
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+    );
+  },
+  );
+}
+
 
