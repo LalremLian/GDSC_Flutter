@@ -37,7 +37,8 @@ class _StreetsState extends State<Streets> {
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold
-              ),),
+              ),
+              ),
             ),
             SizedBox(
               height: 120,
@@ -72,7 +73,8 @@ class _StreetsState extends State<Streets> {
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold
-                ),),
+                ),
+              ),
             ),
             ListView.builder(
               physics: const NeverScrollableScrollPhysics(),
