@@ -23,7 +23,9 @@ class _ApiProfileState extends State<ApiProfile> {
           elevation: 3,
           color: Colors.grey[50],
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
+              //...........................................................Image
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: Hero(
@@ -36,6 +38,7 @@ class _ApiProfileState extends State<ApiProfile> {
                   ),
                 ),
               ),
+              //............................................................Text
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -48,6 +51,7 @@ class _ApiProfileState extends State<ApiProfile> {
                       ),
                       softWrap: true,
                     ),
+                    //......................................................Text
                     Padding(
                       padding: const EdgeInsets.only(top: 8.0),
                       child: Text(
@@ -57,11 +61,9 @@ class _ApiProfileState extends State<ApiProfile> {
                         ),
                         softWrap: true,
                       ),
-                    ),
-                  ],
+                    ),],
                 ),
-              ),
-            ],
+              ),],
           ),
         ),
       ),

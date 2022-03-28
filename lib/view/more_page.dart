@@ -1,10 +1,10 @@
 import 'package:dummy/API/view/api_home.dart';
 import 'package:dummy/GDSC/view/GDSC_home_page.dart';
 import 'package:dummy/OCR/view/home_page.dart';
-import 'package:dummy/productBox_page.dart';
+import 'package:dummy/view/productBox_page.dart';
 import 'package:flutter/material.dart';
 
-import 'main.dart';
+import '../main.dart';
 import 'buttonLayouts_page.dart';
 
 class MorePage extends StatelessWidget {
@@ -22,6 +22,7 @@ class MorePage extends StatelessWidget {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -94,7 +95,7 @@ class MorePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const OCR_Home()
+                      builder: (context) =>  OCR_Home(title: 'sdf',)
                   ),
                 );
               },
@@ -102,7 +103,7 @@ class MorePage extends StatelessWidget {
             ),
           ),
           Padding(
-            //..................................................Button API_Home
+            //...................................................Button API_Home
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
               //..................................Navigator.pop is not mandatory

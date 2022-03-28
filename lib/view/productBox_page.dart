@@ -40,6 +40,9 @@ class ProductBox extends StatelessWidget {
                               Text("Price: " + price.toString()),
                             ],
                           )))
-                ])));
+                ]
+            )
+        )
+    );
   }
 }
