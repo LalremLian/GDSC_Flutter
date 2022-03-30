@@ -56,18 +56,18 @@ class Dashboard extends StatelessWidget {
       ),
     ],
     actionsList: [
-      ActionPosit(keys: [
+      const ActionPosit(keys: [
         stOptions,
         stProductBox,
         stGDCTravelApp,
         stOCRProject,
         stAPIIntegration
       ], actions: [
-        IconButton(
+        /*IconButton(
             icon: const Icon(Icons.add),
             onPressed: () {
               _fragNav.action('teste');
-            })
+            })*/
       ])
     ],
   );
@@ -77,7 +77,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _fragNav.setDrawerContext = context;
-
+    DateTime currentBackPressTime;
     return StreamBuilder<FullPosit>(
         stream: _fragNav.outStreamFragment,
         builder: (con, s) {
@@ -116,6 +116,7 @@ class CustomDrawer extends StatelessWidget {
     Color _getColor() => currentSelect == key ? Colors.white : Colors.black87;
 
     return Material(
+      //..................................................Color of selected Menu
       color: currentSelect == key ? Colors.blueAccent : Colors.transparent,
       child: ListTile(
         leading: Icon(icon, color: currentSelect == key ? Colors.white : null),

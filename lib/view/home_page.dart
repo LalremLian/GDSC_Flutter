@@ -89,7 +89,7 @@ class Home extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const MorePage()),
+                  MaterialPageRoute(builder: (context) => MorePage()),
                 );
               },
               child: const Text('More Options'))

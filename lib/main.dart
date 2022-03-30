@@ -1,4 +1,4 @@
-import 'package:dummy/view/dashBoard_page.dart';
+import 'package:dummy/view/dashboard_page.dart';
 import 'package:dummy/view/home_page.dart';
 import 'package:flutter/material.dart';
 
