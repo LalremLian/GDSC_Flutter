@@ -1,4 +1,5 @@
 import 'package:dummy/view/more_page.dart';
+import 'package:dummy/widget/navigation_drawer_widget.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -7,6 +8,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const NavigationDrawerWidget(),
       backgroundColor: Colors.teal,
       appBar: AppBar(
         backgroundColor: Colors.teal,

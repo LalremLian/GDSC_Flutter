@@ -1,6 +1,7 @@
 import 'package:dummy/API/view/api_home.dart';
 import 'package:dummy/GDSC/view/GDSC_home_page.dart';
 import 'package:dummy/OCR/view/home_page.dart';
+import 'package:dummy/view/bottom_nav_bar_page.dart';
 import 'package:dummy/view/card_swiper_page.dart';
 import 'package:dummy/view/productBox_page.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class MorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -126,6 +127,22 @@ class MorePage extends StatelessWidget {
                 );
               },
               child: const Text('Card Swiper'),
+            ),
+          ),
+          Padding(
+            //.................................................Button CardSwiper
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              //..................................Navigator.pop is not mandatory
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const BottomNavBar()
+                  ),
+                );
+              },
+              child: const Text('Bottom NavBar'),
             ),
           ),
         ],

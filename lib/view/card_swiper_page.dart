@@ -1,4 +1,5 @@
 import 'package:card_swiper/card_swiper.dart';
+import 'package:dummy/view/card_profile_page.dart';
 import 'package:flutter/material.dart';
 
 class CardSwiper extends StatefulWidget {
@@ -28,9 +29,22 @@ class _CardSwiperState extends State<CardSwiper> {
                 itemBuilder: (BuildContext context, int index) {
                   return ClipRRect(
                     borderRadius: BorderRadius.circular(10.0),
-                    child: Image.network(
-                      "https://wallpaperaccess.com/full/7316.jpg",
-                      fit: BoxFit.fill,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const CardProfile(),
+                          ),
+                        );
+                      },
+                      child: Hero(
+                        tag: 1,
+                        child: Image.network(
+                          "https://wallpaperaccess.com/full/7316.jpg",
+                          fit: BoxFit.fill,
+                        ),
+                      ),
                     ),
                   );
                 },
