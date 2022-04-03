@@ -1,15 +1,33 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+import 'bottom_nav_bar_page.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  SplashScreenState createState() => SplashScreenState();
+}
+class SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 3),
+            ()=>Navigator.pushReplacement(context,
+            MaterialPageRoute(builder:
+                (context) => const BottomNavBar()
+            )
+        )
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:Text("Splash Screen Example")),
-      body: const Center(
-          child:Text("Welcome to Home Page",
-              style: TextStyle( color: Colors.black, fontSize: 30),
-          )
-      ),
+        backgroundColor: Colors.white,
+        body: Center(
+          child: Lottie.asset('assets/splash_screen.json'),
+        )
     );
   }
 }

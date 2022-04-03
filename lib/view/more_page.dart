@@ -5,8 +5,6 @@ import 'package:dummy/view/bottom_nav_bar_page.dart';
 import 'package:dummy/view/card_swiper_page.dart';
 import 'package:dummy/view/productBox_page.dart';
 import 'package:flutter/material.dart';
-
-import '../main.dart';
 import 'buttonLayouts_page.dart';
 
 class MorePage extends StatelessWidget {
