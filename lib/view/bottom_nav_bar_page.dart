@@ -23,7 +23,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const NavigationDrawerWidget(),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       appBar: AppBar(
         title: const Text(
           "Dashboard",
@@ -38,7 +38,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
         //.........................................................Primary Color
         backgroundColor: Theme.of(context).primaryColor,
       ),
-      body: pages[pageIndex],
+      body:
+      pages[pageIndex],
       bottomNavigationBar: buildMyNavBar(context),
     );
   }
@@ -50,8 +51,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
         //.........................................................Primary Color
         color: Color.fromRGBO(29, 135, 167, 1),
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
+          topLeft: Radius.circular(0),
+          topRight: Radius.circular(0),
         ),
       ),
       child: Row(
