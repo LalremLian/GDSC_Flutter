@@ -23,7 +23,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const NavigationDrawerWidget(),
-      backgroundColor: Colors.transparent,
       appBar: AppBar(
         title: const Text(
           "Dashboard",
@@ -36,7 +35,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ),
         centerTitle: true,
         //.........................................................Primary Color
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: const Color.fromRGBO(29, 135, 167, 1),
       ),
       body:
       pages[pageIndex],

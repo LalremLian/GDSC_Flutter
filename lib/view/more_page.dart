@@ -28,6 +28,9 @@ class MorePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color.fromRGBO(29, 135, 167, 1),
+                  ),
                   //..................................Navigator.pop is not mandatory
                   onPressed: () {
                     Navigator.pop(context);
@@ -39,6 +42,9 @@ class MorePage extends StatelessWidget {
                 //....................................................Button Layouts
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color.fromRGBO(29, 135, 167, 1),
+                  ),
                   //..................................Navigator.pop is not mandatory
                   onPressed: () {
                     Navigator.push(
@@ -55,6 +61,9 @@ class MorePage extends StatelessWidget {
                 //.................................................Button ProductBox
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color.fromRGBO(29, 135, 167, 1),
+                  ),
                   //..................................Navigator.pop is not mandatory
                   onPressed: () {
                     Navigator.push(
@@ -75,6 +84,9 @@ class MorePage extends StatelessWidget {
                 //..................................................Button GDSC_Home
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color.fromRGBO(29, 135, 167, 1),
+                  ),
                   //..................................Navigator.pop is not mandatory
                   onPressed: () {
                     Navigator.push(
@@ -91,6 +103,9 @@ class MorePage extends StatelessWidget {
                 //...................................................Button OCR_Home
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color.fromRGBO(29, 135, 167, 1),
+                  ),
                   //..................................Navigator.pop is not mandatory
                   onPressed: () {
                     Navigator.push(
@@ -107,6 +122,9 @@ class MorePage extends StatelessWidget {
                 //............................................Button API Integration
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color.fromRGBO(29, 135, 167, 1),
+                  ),
                   //..................................Navigator.pop is not mandatory
                   onPressed: () {
                     Navigator.push(
@@ -123,6 +141,9 @@ class MorePage extends StatelessWidget {
                 //.................................................Button CardSwiper
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color.fromRGBO(29, 135, 167, 1),
+                  ),
                   //..................................Navigator.pop is not mandatory
                   onPressed: () {
                     Navigator.push(
@@ -139,6 +160,9 @@ class MorePage extends StatelessWidget {
                 //.................................................Button CardSwiper
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color.fromRGBO(29, 135, 167, 1),
+                  ),
                   //..................................Navigator.pop is not mandatory
                   onPressed: () {
                     Navigator.push(
