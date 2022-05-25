@@ -1,4 +1,5 @@
 import 'package:dummy/GDSC/model/travel.dart';
+import 'package:dummy/GDSC/widget/ShowDialogWidget.dart';
 import 'package:flutter/material.dart';
 
 class Streets extends StatefulWidget {
@@ -111,8 +112,11 @@ class _StreetsState extends State<Streets> {
                             child: GestureDetector(
                               child: InkWell(
                                 onTap: (){
-                                  //...................calling the function here
-                                  _showDialog(context);
+                                  //................calling the function here(1)
+                                  //_showDialog(context);
+
+                                  //.........................calling a widget(2)
+                                  showDialog(context: context, builder: (_) => const ShowDialog());
                                 },
                                 child: Container(
                                   height: 30,
@@ -136,10 +140,9 @@ class _StreetsState extends State<Streets> {
     );
   }
 }
-//......................................................................Function
+//...........................................................ShowDialog_Function
 void _showDialog(BuildContext context){
-  showDialog(
-    context: context, builder: (BuildContext context) {
+  showDialog(context: context, builder: (BuildContext context) {
     // return object of type Dialog
     return AlertDialog(
       title: const Text("Message"),

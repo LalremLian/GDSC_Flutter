@@ -33,6 +33,7 @@ class _ApiHomeState extends State<ApiHome> {
         title: const Text('API Integration'),
       ),
       body: Visibility(
+        //...................................................if isLoaded is true
         visible: isLoaded,
         child: ListView.builder(
           itemCount: posts?.length,

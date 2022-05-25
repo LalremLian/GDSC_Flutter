@@ -20,10 +20,27 @@ class Home extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Image.network(
-              "https://pfpmaker.com/_nuxt/img/profile-3-1.3e702c5.png",
-              height: 200,
-              width: 320),
+          //.....................................Circular BoxShape with a Shadow
+          Container(
+            width: 340.0,
+            height: 250.0,
+            alignment: Alignment.center,
+            //color: Colors.amber,
+            decoration: BoxDecoration(
+                color: Colors.blueGrey,
+                border: Border.all(color: Colors.grey),
+                shape: BoxShape.circle,
+                image: const DecorationImage(
+                    image: NetworkImage(
+                        "https://pfpmaker.com/_nuxt/img/profile-3-1.3e702c5.png")),
+                boxShadow: const [
+                  BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 3,
+                      spreadRadius: 8,
+                      offset: Offset(4, 4))
+                ]),
+          ),
           const SizedBox(
             height: 15,
           ),
