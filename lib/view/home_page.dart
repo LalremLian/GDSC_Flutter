@@ -22,8 +22,8 @@ class Home extends StatelessWidget {
           ),
           //.....................................Circular BoxShape with a Shadow
           Container(
-            width: 340.0,
-            height: 250.0,
+            width: 300.0,
+            height: 200.0,
             alignment: Alignment.center,
             //color: Colors.amber,
             decoration: BoxDecoration(
@@ -50,7 +50,7 @@ class Home extends StatelessWidget {
                 fontSize: 35, fontWeight: FontWeight.bold, color: Colors.amber),
           ),
           const Text(
-            "Me want Banana!",
+            "Me want Banana!!",
             style: TextStyle(fontSize: 20, color: Colors.orangeAccent),
           ),
           const SizedBox(
@@ -104,14 +104,61 @@ class Home extends StatelessWidget {
             width: 380,
             color: Colors.blueAccent,
           ),
-          ElevatedButton(
+          Padding(
+            //...............................................Button Style no: 01
+            padding: const EdgeInsets.only(top: 20.0),
+            child: ElevatedButton.icon(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MorePage()),
+                  MaterialPageRoute(builder: (context) => const MorePage()),
                 );
               },
-              child: const Text('More Options'))
+              style: ElevatedButton.styleFrom(
+                fixedSize: const Size(300, 60),
+                textStyle: const TextStyle(
+                  fontSize: 23,
+                  fontWeight: FontWeight.bold,
+                ),
+                primary: Colors.amber,
+                onPrimary: Colors.black87,
+                elevation: 8,
+                shadowColor: Colors.black87,
+                side: const BorderSide(color: Colors.black87, width: 4),
+                shape: const StadiumBorder(),
+              ),
+              icon: const Icon(Icons.add_moderator),
+              label: const Text('More Options'),
+            ),
+          ),
+          //.................................................Button Style no: 02
+          Padding(
+            //.................................................MoreOption Button
+            padding: const EdgeInsets.only(top: 20.0),
+            child: OutlinedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MorePage()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                fixedSize: const Size(300, 60),
+                textStyle: const TextStyle(
+                  fontSize: 23,
+                  fontWeight: FontWeight.bold,
+                ),
+                //primary: Colors.amber,
+                onPrimary: Colors.black87,
+                //elevation: 8,
+                //shadowColor: Colors.black87,
+                //side: const BorderSide(color: Colors.black87, width: 4),
+                shape: const StadiumBorder(),
+              ),
+              icon: const Icon(Icons.add_moderator),
+              label: const Text('More Options'),
+            ),
+          )
         ],
       ),
     );
