@@ -22,7 +22,7 @@ class ShowDialog extends StatelessWidget {
               onPressed: () {
                 var snackBar = const SnackBar(
                     duration: Duration(milliseconds: 2000),
-                    content: Text("That's great! Thanks you for your feedback.")
+                    content: Text("That's great! Thanks for your feedback.")
                 );
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 Navigator.of(context).pop();
