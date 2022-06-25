@@ -16,7 +16,7 @@ class FlutterTutorial extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.blueGrey,
         title: const Text("Crash Tutorial"),
       ),
 
