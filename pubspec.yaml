@@ -42,6 +42,7 @@ dependencies:
   fragment_navigate: ^1.2.0+2
   card_swiper: ^2.0.3
   lottie: ^1.2.2
+  #jitsi_meet: ^4.0.0 -------- For free video calling package
 
 dev_dependencies:
   flutter_test:
