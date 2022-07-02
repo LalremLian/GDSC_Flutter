@@ -11,18 +11,16 @@ class FlutterTutorial extends StatelessWidget {
   int pageIndex = 0;
 
   List<String> prices = ["12", "7", "5", "13"];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-        title: const Text("Crash Tutorial"),
-      ),
+        appBar: AppBar(
+          backgroundColor: Colors.blueGrey,
+          title: const Text("Crash Tutorial"),
+        ),
 
-
-      //..................................................................Drawer
-      drawer: const DrawerWidget(),
+        //..................................................................Drawer
+        drawer: const DrawerWidget(),
 
 
       //........................................................ListView-Builder
@@ -44,25 +42,21 @@ class FlutterTutorial extends StatelessWidget {
       ),
 
 
-      //..................................................Floating-Action-Button
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        //elevation: 0,
-        onPressed: () {
+        //..................................................Floating-Action-Button
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          //elevation: 0,
+          onPressed: () {
+            //..........................................................ShowDialog
+            showDialog(context: context, builder: (_) => const ShowDialog());
+          },
+          child: const Icon(Icons.add),
+          backgroundColor: Colors.blueGrey.shade300,
+        ),
 
-
-          //..........................................................ShowDialog
-          showDialog(context: context, builder: (_) => const ShowDialog());
-        },
-        child: const Icon(Icons.add),
-        backgroundColor: Colors.blueGrey.shade300,
-      ),
-
-
-      //.....................................................BottomNavigationBar
-      bottomNavigationBar: CustomBottomAppBar(context: context,)
-    );
+        //.....................................................BottomNavigationBar
+        bottomNavigationBar: CustomBottomAppBar(
+          context: context,
+        ));
   }
 }
-
-

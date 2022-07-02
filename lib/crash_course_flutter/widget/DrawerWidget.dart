@@ -1,3 +1,4 @@
+import 'package:dummy/crash_course_flutter/widget/IconChangerWidget.dart';
 import 'package:flutter/material.dart';
 
 class DrawerWidget extends StatelessWidget {
@@ -19,8 +20,14 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.voicemail),
-            title: const Text("Number1"),
-            onTap: () {},
+            title: const Text("Stateful Widget"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MainBodyStateful()),
+              );
+            },
           ),
           ListTile(
             leading: const Icon(Icons.voicemail),
