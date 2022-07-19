@@ -22,6 +22,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //...........................................................Custom Drawer
       drawer: const NavigationDrawerWidget(),
       appBar: AppBar(
         title: const Text(
@@ -43,6 +44,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     );
   }
 
+  //.........................................................BottomNavigationBar
   Container buildMyNavBar(BuildContext context) {
     return Container(
       height: 55,

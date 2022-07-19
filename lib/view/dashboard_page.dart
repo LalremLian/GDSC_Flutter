@@ -52,7 +52,7 @@ class Dashboard extends StatelessWidget {
         key: stAPIIntegration,
         title: 'API Integration',
         icon: Icons.settings,
-        fragment: ApiHome(),
+        fragment: GDSC_Home(),
       ),
     ],
     actionsList: [
