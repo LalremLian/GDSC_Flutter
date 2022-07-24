@@ -1,8 +1,8 @@
-import 'package:dummy/API/controller/ApiController.dart';
 import 'package:dummy/API/view/api_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../controllers/ApiController.dart';
 import '../widgets/ShimeringWidget.dart';
 
 class ApiHome extends StatefulWidget {
@@ -21,6 +21,7 @@ class _ApiHomeState extends State<ApiHome> {
   void initState()
   {
     super.initState();
+    apiController.getData();
   }
 
   @override

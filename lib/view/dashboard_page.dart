@@ -1,4 +1,4 @@
-import 'package:dummy/API/view/api_home.dart';
+import 'package:dummy/API/view/api_get_method.dart';
 import 'package:dummy/GDSC/view/GDSC_home_page.dart';
 import 'package:dummy/OCR/view/home_page.dart';
 import 'package:dummy/view/more_page.dart';

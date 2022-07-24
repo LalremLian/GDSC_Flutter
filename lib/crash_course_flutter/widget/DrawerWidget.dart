@@ -1,5 +1,6 @@
-import 'package:dummy/crash_course_flutter/widget/IconChangerWidget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({
@@ -22,11 +23,7 @@ class DrawerWidget extends StatelessWidget {
             leading: const Icon(Icons.voicemail),
             title: const Text("Stateful Widget"),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const MainBodyStateful()),
-              );
+              Get.toNamed("/iconChangerScreen");
             },
           ),
           ListTile(

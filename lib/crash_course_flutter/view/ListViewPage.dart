@@ -19,7 +19,7 @@ class FlutterTutorial extends StatelessWidget {
           title: const Text("Crash Tutorial"),
         ),
 
-        //..................................................................Drawer
+        //................................................................Drawer
         drawer: const DrawerWidget(),
 
 
@@ -42,19 +42,19 @@ class FlutterTutorial extends StatelessWidget {
       ),
 
 
-        //..................................................Floating-Action-Button
+        //................................................Floating-Action-Button
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
           //elevation: 0,
           onPressed: () {
-            //..........................................................ShowDialog
+            //........................................................ShowDialog
             showDialog(context: context, builder: (_) => const ShowDialog());
           },
           child: const Icon(Icons.add),
           backgroundColor: Colors.blueGrey.shade300,
         ),
 
-        //.....................................................BottomNavigationBar
+        //...................................................BottomNavigationBar
         bottomNavigationBar: CustomBottomAppBar(
           context: context,
         ));

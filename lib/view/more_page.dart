@@ -1,14 +1,8 @@
-import 'package:dummy/API/view/api_home.dart';
-import 'package:dummy/GDSC/view/GDSC_home_page.dart';
 import 'package:dummy/OCR/view/home_page.dart';
-import 'package:dummy/crash_course_flutter/view/ListViewPage.dart';
 import 'package:dummy/view/bottom_nav_bar_page.dart';
-import 'package:dummy/view/card_swiper_page.dart';
-import 'package:dummy/view/productBox_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'buttonLayouts_page.dart';
 
 class MorePage extends StatelessWidget {
   const MorePage({Key? key}) : super(key: key);
@@ -36,7 +30,7 @@ class MorePage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         primary: const Color.fromRGBO(29, 135, 167, 1),
                       ),
-                      //..................................Navigator.pop is not mandatory
+                      //..........................Navigator.pop is not mandatory
                       onPressed: () {
                         Navigator.pop(context);
                       },
@@ -44,75 +38,50 @@ class MorePage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    //....................................................Button Layouts
+                    //............................................Button Layouts
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: const Color.fromRGBO(29, 135, 167, 1),
                       ),
-                      //..................................Navigator.pop is not mandatory
-                      onPressed: () {
-                        /*Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Get.Off),
-                        );*/
-                        Get.toNamed("/buttonLayoutScreen");
+                      onPressed: () {Get.toNamed("/buttonLayoutScreen");
                       },
                       child: const Text('Button Layouts'),
                     ),
                   ),
                   Padding(
-                    //.................................................Button ProductBox
+                    //.........................................Button ProductBox
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: const Color.fromRGBO(29, 135, 167, 1),
                       ),
-                      //..................................Navigator.pop is not mandatory
                       onPressed: () {
-/*                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ProductBox(
-                                  name: 'name',
-                                  description: 'description',
-                                  price: 100,
-                                  image:
-                                  'https://m.media-amazon.com/images/M/MV5BMjc2NjYyMzgtMmExMi00YzllLTgxNjgtNjA4MmUzMWZlNDZkXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_.jpg')),
-                        );*/
-                      Get.toNamed("/productBoxScreen", arguments: {"Calvert", "How don't know", 12, "https://pfpmaker.com/_nuxt/img/profile-3-1.3e702c5.png"});
+                        Get.toNamed("/productBoxScreen",
+                            arguments: {"Calvert", "How don't know", 12, "https://pfpmaker.com/_nuxt/img/profile-3-1.3e702c5.png"});
                       },
                       child: const Text('Product Box'),
                     ),
                   ),
                   Padding(
-                    //..................................................Button GDSC_Home
+                    //..........................................Button GDSC_Home
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: const Color.fromRGBO(29, 135, 167, 1),
                       ),
-                      //..................................Navigator.pop is not mandatory
-                      onPressed: () {
-/*                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const GDSC_Home()),
-                        );*/
-                      Get.toNamed("/GDSCTravelScreen");
+                      onPressed: () {Get.toNamed("/GDSCTravelScreen");
                       },
                       child: const Text('GDSC Travel App'),
                     ),
                   ),
                   Padding(
-                    //...................................................Button OCR_Home
+                    //...........................................Button OCR_Home
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: const Color.fromRGBO(29, 135, 167, 1),
                       ),
-                      //..................................Navigator.pop is not mandatory
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -126,52 +95,36 @@ class MorePage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    //............................................Button API Integration
+                    //....................................Button API Integration
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: const Color.fromRGBO(29, 135, 167, 1),
                       ),
-                      //..................................Navigator.pop is not mandatory
-                      onPressed: () {
-/*                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const ApiHome()),
-                        );*/
-                      Get.toNamed("/apiIntegrationScreen");
+                      onPressed: () {Get.toNamed("/apiIntegrationScreen");
                       },
                       child: const Text('API Integration'),
                     ),
                   ),
                   Padding(
-                    //.................................................Button CardSwiper
+                    //.........................................Button CardSwiper
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: const Color.fromRGBO(29, 135, 167, 1),
                       ),
-                      //..................................Navigator.pop is not mandatory
-                      onPressed: () {
-/*                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CardSwiper(
-                                title: "Card Swiper",
-                              )),
-                        );*/
-                      Get.toNamed("/cardSwiperScreen");
+                      onPressed: () {Get.toNamed("/cardSwiperScreen");
                       },
                       child: const Text('Card Swiper'),
                     ),
                   ),
                   Padding(
-                    //.................................................Button CardSwiper
+                    //.......................................BottomNavigationBar
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: const Color.fromRGBO(29, 135, 167, 1),
                       ),
-                      //..................................Navigator.pop is not mandatory
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -183,20 +136,13 @@ class MorePage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    //.................................................Button Crash_Course Flutter
+                    //...............................Button Crash_Course Flutter
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: const Color.fromRGBO(29, 135, 167, 1),
                       ),
-                      //..................................Navigator.pop is not mandatory
-                      onPressed: () {
-/*                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => FlutterTutorial()),
-                        );*/
-                      Get.toNamed("/flutterTutorialScreen");
+                      onPressed: () {Get.toNamed("/flutterTutorialScreen");
                       },
                       child: const Text('Flutter Tutorial'),
                     ),

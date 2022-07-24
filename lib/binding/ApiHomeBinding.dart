@@ -1,5 +1,7 @@
-import 'package:dummy/API/controller/ApiController.dart';
+
 import 'package:get/get.dart';
+
+import '../API/controllers/ApiController.dart';
 
 class ApiHomeBinding extends Bindings{
   @override
