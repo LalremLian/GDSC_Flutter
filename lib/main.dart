@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       getPages: appRoutes(),
-      initialRoute: "/splashScreen",
+      // initialRoute: "/splashScreen",
+      initialRoute: "/flutterTutorialScreen",
 
       //..............................................This one removes Debug Tag
       debugShowCheckedModeBanner: false,

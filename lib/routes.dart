@@ -12,14 +12,13 @@ import 'API/view/api_get_method.dart';
 import 'API/view/api_home_page.dart';
 import 'GDSC/view/GDSC_home_page.dart';
 import 'binding/ApiHomeBinding.dart';
+import 'crash_course_flutter/view/DropDownMenuPage.dart';
 import 'crash_course_flutter/view/IconChangerPage.dart';
 import 'crash_course_flutter/view/ListViewPage.dart';
 
 appRoutes() => [
-      GetPage(name: "/splashScreen",
-          page: () => const SplashScreen()),
-      GetPage(name: "/dashboardScreen",
-          page: () => const BottomNavBar()),
+      GetPage(name: "/splashScreen", page: () => const SplashScreen()),
+      GetPage(name: "/dashboardScreen", page: () => const BottomNavBar()),
       GetPage(
           name: "/buttonLayoutScreen",
           page: () => const ButtonLayouts(),
@@ -33,15 +32,10 @@ appRoutes() => [
               description: "How don't know",
               price: 12,
               image: "https://pfpmaker.com/_nuxt/img/profile-3-1.3e702c5.png")),
-      GetPage(name: "/GDSCTravelScreen",
-          page: () => const GDSC_Home()),
+      GetPage(name: "/GDSCTravelScreen", page: () => const GDSC_Home()),
+      GetPage(name: "/apiIntegrationScreen", page: () => const ApiMainPage()),
       GetPage(
-          name: "/apiIntegrationScreen",
-          page: () => const ApiMainPage()),
-      GetPage(
-          name: "/getMethod",
-          page: () => ApiHome(),
-          binding: ApiHomeBinding()),
+          name: "/getMethod", page: () => ApiHome(), binding: ApiHomeBinding()),
       GetPage(
           name: "/postMethod",
           page: () => const ApiPostMethod(),
@@ -53,14 +47,15 @@ appRoutes() => [
       GetPage(
           name: "/cardSwiperScreen",
           page: () => CardSwiper(title: "CardSwiper")),
-      GetPage(name: "/flutterTutorialScreen",
+      GetPage(
+          name: "/flutterTutorialScreen",
           page: () => FlutterTutorial(),
           binding: FlutterTutorialBinding(),
           middlewares: [MyMiddelware()],
           transition: Transition.leftToRightWithFade,
           transitionDuration: const Duration(milliseconds: 500)),
-      GetPage(name: "/iconChangerScreen",
-          page: () => const MainBodyStateful()),
+      GetPage(name: "/iconChangerScreen", page: () => const MainBodyStateful()),
+      GetPage(name: "/dropdownMenuScreen", page: () => DropdownMenuPage()),
     ];
 
 class MyMiddelware extends GetMiddleware {

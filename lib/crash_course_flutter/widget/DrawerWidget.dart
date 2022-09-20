@@ -28,8 +28,10 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.voicemail),
-            title: const Text("Number2"),
-            onTap: () {},
+            title: const Text("Drop-Down Menu"),
+            onTap: () {
+              Get.toNamed("/dropdownMenuScreen");
+            },
           ),
           const Padding(
             padding: EdgeInsets.all(14.0),

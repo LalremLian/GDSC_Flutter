@@ -56,7 +56,7 @@ class ButtonLayouts extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10), color: Colors.green),
                 message: 'My Account',
-                child: FlatButton(
+/*                child: FlatButton(
                   onPressed: () {
 
                   },
@@ -64,7 +64,7 @@ class ButtonLayouts extends StatelessWidget {
                     Icons.account_box,
                     size: 100,
                   ),
-                )),
+                )*/),
           )
         ],
       ),
